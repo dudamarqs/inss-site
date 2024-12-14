@@ -290,8 +290,9 @@ header::before {
 /* Media Query para telas pequenas */
 @media screen and (max-width: 360px) {
     .header {
-        align-items: flex-start;
+        align-items: center;
         padding: 15px 20px;
+        width: 360px
     }
     
     .logo {
@@ -349,10 +350,6 @@ header::before {
     .hero_title h3 {
         font-size: 18px;
     }
-
-    /* .gradient {
-        
-    } */
     
     #hero_content {
         margin-top: 20px;
@@ -363,13 +360,13 @@ header::before {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-bottom: 20px;
+        gap: 20px;
     }
     
     .paragraph_1_text {
         text-align: justify;
         font-size: 1rem;
-        margin-bottom: 10px;
+        width: 100%
     }
     
     .image_p1 img {
@@ -385,14 +382,14 @@ header::before {
     }
     
     .servicos_rapidos {
-        display: flex;
         flex-direction: column;
         justify-content: center;
         gap: 5px;
+        width: 100%
     }
     
     .servicos_rapidos .item {
-        width: 45%;
+        width: 20%
         text-align: center;
         padding: 10px;
     }
@@ -400,7 +397,6 @@ header::before {
     .servicos_rapidos .item_img img {
         width: 60%;
         height: auto;
-        margin-bottom: 10px;
     }
     
     .serv_texto p {
