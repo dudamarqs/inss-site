@@ -30,6 +30,17 @@ body {
     backdrop-filter: blur(10px); /* Efeito de desfoque */
 }
 
+/* HERO - PARALLAX */
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+}
+
 /* Logo */
 .logo {
     width: 7rem;
@@ -52,21 +63,6 @@ body {
 
 .nav_links li a:hover {
     color: #009A66;
-}
-
-/* HERO - PARALLAX */
-header::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.5); 
-    z-index: 1;
-}
-
-#hero_content {
-    padding: 4rem 13rem 6.5rem 13rem;
 }
 
 h1 {
@@ -96,15 +92,55 @@ h1 {
     padding: 4rem 13rem 6.5rem 13rem;
 }
 
-#hero_content p {
+/* PARÁGRAFOS */
+.paragraph_1 {
+    display: flex;
+    gap: 5rem;
+}
+
+.paragraph_1_text {
     font-size: 1.2rem;
     font-weight: 500;
 }
 
+.image_p1 img {
+    width: 27rem;
+    height: auto;
+}
+
+.mensagem {
+    margin-top: 1rem;
+    color: #005197;
+}
+
+h3 {
+    color: #007C53;
+}
+
+/* Estrutura principal da seção */
+.item {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem; /* Espaçamento entre texto e imagem */
+    margin: 1rem 0;
+}
+
+/* Título da seção */
+.item_texto h2 {
+    color: #FDBE50;
+}
+
+/* Imagem mantém o tamanho fixo */
+.item_imagem img {
+    width: auto;
+    max-width: 25rem; /* Ajuste o tamanho máximo conforme necessário */
+    height: auto; /* Mantém as proporções */
+}
+
 /* Botão estilizado */
-button {
+.btn_ver_mais {
     display: inline-block;
-    margin-top: 0.2rem;
+    margin-top: 1rem;
     padding: 0.8rem 1.5rem;
     background-color: #009A66; /* Verde da logo do INSS */
     color: #FFF; /* Texto branco */
@@ -119,77 +155,14 @@ button {
 
 /* Links dentro do botão */
 .btn_ver_mais a {
-    text-decoration: none;
-    color: inherit; 
-    font-weight: inherit; 
+    text-decoration: none; /* Remove o sublinhado */
+    color: inherit; /* Garante que o link herde a cor branca do botão */
+    font-weight: inherit; /* Herda o estilo de fonte do botão */
 }
 
 /* Efeito hover no botão */
 .btn_ver_mais:hover {
     background-color: #007C53; /* Tom de verde mais escuro no hover */
-}
-
-#localizacao {
-    margin: 2rem auto;
-    max-width: 1200px;
-    text-align: center;
-}
-
-#localizacao p {
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
-}
-
-/* Estilos para as agências */
-.agency {
-    background-color: #FFF;
-    padding: 15px;
-    margin: 1rem 0;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-.agency h3 {
-    font-size: 1.8rem;
-    color: #005197;
-}
-
-.agency p {
-    font-size: 1rem;
-    margin: 5px 0;
-}
-
-.agency button {
-    background-color: #009A66;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.agency button:hover {
-    background-color: #007C53;
-}
-
-/* Mapa interativo */
-.map {
-    margin-top: 3rem;
-}
-
-.map iframe {
-    width: 100%;
-    height: 450px;
-    border: none;
-    border-radius: 8px;
-}
-
-/* Estilo para a geolocalização */
-#location {
-    margin-top: 1.5rem;
-    font-size: 1.2rem;
-    font-weight: 600;
 }
 
 /* FOOTER */
@@ -270,6 +243,7 @@ button {
     margin-bottom: 0.5rem;
 }
 
+
 /* Media Query para telas pequenas */
 @media screen and (max-width: 360px) {
     .header {
@@ -286,9 +260,8 @@ button {
         gap: 10px;
     }
 
-    /* Ajustes no hero */
     #hero_content {
-        padding: 0rem 2rem 6.5rem 2rem;
+        padding: 3rem 1rem 6.5rem 1rem;
     }
 
     h1 {
@@ -296,43 +269,72 @@ button {
         text-align: center;
     }
 
+    .mensagem {
+        text-align: center;
+    }
+
     #hero_content p {
         font-size: 1rem;
-        padding: 5px;
+        text-align: justify;
     }
 
-    /* Ajustes no botão */
-    button {
-        padding: 0.8rem 1.2rem;
-        font-size: 0.9rem;
+    .item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-sizing: border-box;
+        mar
     }
-
-    /* Ajustes nas agências */
-    .agency {
-        padding: 15px;
-        margin: 1rem 0;
+    
+    .item_imagem img {
+        width: 100%;
+        max-width: 300px;
+        height: auto; 
     }
-
-    .agency h3 {
-        font-size: 1.5rem;
+    
+    .item_texto {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
     }
-
-    /* Ajustes no mapa */
-    .map iframe {
-        height: 300px;
-        padding: 5px;
+    
+    .item_texto h2 {
+        font-size: 22px;
     }
-
-    /* Ajustes no footer */
+    
+    .item_texto h3 {
+        font-size: 18px;
+    }
+    
+    .item_texto p {
+        margin-bottom: 20px
+    }
+    
+    .item_texto ul {
+        list-style: none; 
+        text-align: left;
+    }
+    
+    .item_texto ul li {
+        font-size: 1rem;
+        margin-bottom: 1px;
+    }
+    
+    .btn_ver_mais {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+    
     .footer {
-        padding: 2rem 1rem 1rem 1rem;
+        padding: 1rem 1rem 1rem 1rem;
     }
 
     .footer_nav_links {
-        display: flex;
         flex-direction: row;
-        align-items: center;
-        gap: 15px;
+        gap: 10px;
+        text-align: center;
     }
 
     .links_redes {
