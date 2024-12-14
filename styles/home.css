@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Kablammo&family=Kreon:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FFFDF8;
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0.0625rem; /* 1px em rem */
+    line-height: 1.8;
+    text-align: justify;
+    overflow-x: hidden;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: rgba(196, 196, 196, 0.7); /* Fundo semi-transparente */
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    backdrop-filter: blur(10px); /* Efeito de desfoque */
+}
+
+/* Logo */
+.logo {
+    width: 7rem;
+    height: auto;
+}
+
+/* Links de navegação */
+.nav_links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav_links li a {
+    color: #005197;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav_links li a:hover {
+    color: #009A66;
+}
+
+/* HERO - PARALLAX */
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+}
+
+.background {
+    width: 100%; /* Garante que ocupe 100% da largura da tela */
+    height: 100vh; /* Altura total da tela */
+    background-image: url('/img/imagem-hero.png'); /* Certifique-se de que o caminho está correto */
+    background-repeat: no-repeat; /* Não repete a imagem */
+    background-size: cover; /* A imagem cobre todo o container */
+    background-position: center; /* Centraliza a imagem */
+    position: relative; /* Necessário para efeitos de layout */
+}
+
+
+
+.hero {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: image(imagem-hero);
+}
+
+/* Ajustar a imagem do hero_image para estar centralizada */
+.hero_image img {
+    width: 100%; /* Ajuste conforme necessário */
+    max-width: 600px; /* Limita o tamanho máximo */
+    height: auto;
+    margin-top: 5rem;
+    margin-bottom: 2rem; /* Espaço abaixo da imagem */
+}
+
+/* HERO TITLE - centralizar título e subtítulo */
+.hero_title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero_title h1 {
+    font-size: 2rem;
+    color: #FFFDF8;
+    display: flex;
+    margin-bottom: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    animation: fadeInUp 1.5s ease-out forwards;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.hero_title h3 {
+    font-size: 1.5rem;
+    color: #FFFDF8;
+    font-weight: 600;
+    margin-bottom: 0.1rem;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-out 0.5s forwards;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* ANIMAÇÃO FADE-IN-UP */
+@keyframes fadeInUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.gradient {
+    width: 100%;
+    height: 7rem;
+    background: linear-gradient(to bottom, transparent 40%, #FFFDF8 60%);
+}
+
+#hero_content {
+    padding: 4rem 13rem 6.5rem 13rem;
+}
+
+/* PARÁGRAFOS */
+.paragraph_1 {
+    display: flex;
+    gap: 5rem;
+}
+
+.paragraph_1_text {
+    font-size: 1.2rem;
+    font-weight: 500;
+    width: 50%;
+}
+
+.image_p1 img {
+    width: 27rem;
+    height: auto;
+}
+
+.mensagem {
+    margin-top: 3rem;
+    color: #005197;
+}
+
+.servicos_rapidos {
+    display: flex;
+    gap: 1rem; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70rem;
+    gap: 4rem;
+    margin: 0 auto;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.item {
+    text-align: center;
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.item:hover {
+    transform: scale(1.05);
+}
+
+.item_img img {
+    max-width: auto; /* Imagem responsiva */
+    height: 12.75rem; /* 300px em rem */
+}
+
+.serv_texto {
+    margin-top: 0.1rem; /* 8px em rem */
+    font-size: 1.2rem; /* 24px em rem */
+    font-weight: 600;
+    color: #000;
+}
+
+.item:hover .serv_texto {
+    color: #000; 
+}
+
+/* FOOTER */
+.footer {
+    background-color: #21165c;
+    color: #FFFDF8;
+    padding: 2rem 25rem 0.5rem 20rem;
+}
+
+.footer a {
+    color: #FFFDF8;
+    text-decoration: none;
+    margin-bottom: 2rem;
+}
+
+.footer_nav_links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin-bottom: 1rem;
+}
+
+.footer_nav_links li a {
+    color: #FFFDF8;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.footer_nav_links li a:hover {
+    color: #009A66;
+}
+
+.redes p {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.links_redes {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.rede1 img, .rede2 img, .rede3 img, .rede4 img {
+    height: 30px;
+}
+
+.rede1 img:hover {
+    background-color: #005197;
+    border-radius: 50%;
+}
+
+.rede2 img:hover {
+    background-color: #c40089;
+    border-radius: 50%;
+}
+
+.rede3 img:hover {
+    background-color: #9d0000;
+    border-radius: 50%;
+}
+
+.rede4 img:hover {
+    background-color: #000000;
+    border-radius: 50%;
+}
+
+.final {
+    display: grid;
+    place-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.final img {
+    transform: scale(1.2);
+    margin-bottom: 0.5rem;
+}
