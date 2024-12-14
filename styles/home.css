@@ -66,13 +66,13 @@ header::before {
 }
 
 .background {
-    width: 100%; /* Garante que ocupe 100% da largura da tela */
-    height: 100vh; /* Altura total da tela */
-    background-image: url('/img/imagem-hero.png'); /* Certifique-se de que o caminho está correto */
-    background-repeat: no-repeat; /* Não repete a imagem */
-    background-size: cover; /* A imagem cobre todo o container */
-    background-position: center; /* Centraliza a imagem */
-    position: relative; /* Necessário para efeitos de layout */
+    width: 100%;
+    height: 100vh;
+    background-image: url('/img/imagem-hero.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+    position: relative;
 }
 
 
@@ -90,8 +90,8 @@ header::before {
 
 /* Ajustar a imagem do hero_image para estar centralizada */
 .hero_image img {
-    width: 100%; /* Ajuste conforme necessário */
-    max-width: 600px; /* Limita o tamanho máximo */
+    width: 100%;
+    max-width: 600px;
     height: auto;
     margin-top: 5rem;
     margin-bottom: 2rem; /* Espaço abaixo da imagem */
@@ -285,4 +285,170 @@ header::before {
 .final img {
     transform: scale(1.2);
     margin-bottom: 0.5rem;
+}
+
+/* Media Query para telas pequenas */
+@media screen and (max-width: 360px) {
+    .header {
+        align-items: flex-start;
+        padding: 15px 20px;
+    }
+    
+    .logo {
+        width: 5rem;
+    }
+
+    .nav_links {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    #hero_content {
+        padding: 3rem 1rem 6.5rem 1rem;
+    }
+
+    .background {
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 600px;
+    }
+
+    .gradient {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 20%;
+        border: none;
+        margin: 0;
+        padding: 0; 
+    }
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        max-width: 350px;
+        margin-bottom: 20px;
+        margin-top: 0;
+    }
+    
+    .hero_image img {
+        width: 80%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+    
+    .hero_title h1 {
+        font-size: 2.5rem
+        margin-bottom: 10px;
+    }
+    
+    .hero_title h3 {
+        font-size: 18px;
+    }
+
+    /* .gradient {
+        
+    } */
+    
+    #hero_content {
+        margin-top: 20px;
+        padding: 3rem 1rem 6.5rem 1rem;
+    }
+    
+    .paragraph_1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    
+    .paragraph_1_text {
+        text-align: justify;
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+    
+    .image_p1 img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+    
+    .mensagem {
+        text-align: center;
+        font-size: 22px;
+        margin: 20px 0;
+    }
+    
+    .servicos_rapidos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+    }
+    
+    .servicos_rapidos .item {
+        width: 45%;
+        text-align: center;
+        padding: 10px;
+    }
+    
+    .servicos_rapidos .item_img img {
+        width: 60%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+    
+    .serv_texto p {
+        font-size: 1rem;
+    }
+    
+    .footer {
+        padding: 1rem 1rem 1rem 1rem;
+    }
+
+    .footer_nav_links {
+        flex-direction: row;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .footer_info {
+        align-items: center
+    }
+
+    .links_redes {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .final p {
+        font-size: 10px;
+    }
+}
+
+/* Media Query para telas muito pequenas */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    button {
+        padding: 0.8rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    #hero_content {
+        padding: 3rem 1rem 5rem 1rem;
+    }
+
+    .footer_nav_links {
+        flex-direction: row;
+        gap: 10px;
+        text-align: center;
+    }
 }
