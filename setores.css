@@ -23,7 +23,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 30px;
-    background-color: rgba(196, 196, 196, 0.7); /* Fundo semi-transparente */
+    background-color: rgba(196, 196, 196, 0.7); 
     position: fixed;
     width: 100%;
     z-index: 10;
@@ -347,24 +347,38 @@ h3 {
     }
 }
 
-/* Media Query para telas muito pequenas */
 @media screen and (max-width: 480px) {
     h1 {
-        font-size: 2rem;
+        font-size: 2rem; /* Reduz o tamanho do título */
     }
 
     button {
         padding: 0.8rem 1.2rem;
-        font-size: 0.9rem;
+        font-size: 0.9rem; /* Ajusta o tamanho do botão */
     }
 
     #hero_content {
-        padding: 3rem 1rem 5rem 1rem;
+        padding: 3rem 1rem 5rem 1rem; /* Ajuste o padding no hero */
     }
 
     .footer_nav_links {
         flex-direction: row;
         gap: 10px;
-        text-align: center;
+        text-align: center; /* Alinha os links do footer ao centro */
+    }
+
+    .item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item_imagem img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .footer {
+        padding: 1rem; /* Ajuste do padding no footer */
     }
 }
