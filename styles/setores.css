@@ -246,7 +246,7 @@ h3 {
     .header {
         align-items: flex-start;
         padding: 15px 20px;
-        width: 360px
+        position: fixed;
     }
     
     .logo {
