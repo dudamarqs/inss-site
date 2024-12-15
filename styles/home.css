@@ -174,7 +174,10 @@ header::before {
     color: #005197;
 }
 
+
 .servicos_rapidos {
+    display: flex;
+    gap: 1rem; 
     display: flex;
     justify-content: center;
     align-items: center;
