@@ -246,19 +246,20 @@ h3 {
     .header {
         align-items: flex-start;
         padding: 15px 20px;
+        width: 360px
     }
     
     .logo {
-        width: 5rem;
+    width: 5rem;
     }
-
+    
     .nav_links {
-        flex-direction: row;
-        gap: 10px;
+    flex-direction: row;
+    gap: 10px;
     }
-
+    
     #hero_content {
-        padding: 3rem 1rem 3rem 1rem;
+    padding: 3rem 1rem 6.5rem 1rem;
     }
 
     h1 {
