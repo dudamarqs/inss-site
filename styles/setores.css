@@ -244,3 +244,141 @@ h3 {
 }
 
 
+/* Media Query para telas pequenas */
+@media screen and (max-width: 360px) {
+    .header {
+        align-items: flex-start;
+        padding: 15px 20px;
+    }
+    
+    .logo {
+        width: 5rem;
+    }
+
+    .nav_links {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    #hero_content {
+        padding: 3rem 1rem 6.5rem 1rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .mensagem {
+        text-align: center;
+    }
+
+    #hero_content p {
+        font-size: 1rem;
+        text-align: justify;
+    }
+
+    .item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-sizing: border-box;
+        mar
+    }
+    
+    .item_imagem img {
+        width: 100%;
+        max-width: 300px;
+        height: auto; 
+    }
+    
+    .item_texto {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .item_texto h2 {
+        font-size: 22px;
+    }
+    
+    .item_texto h3 {
+        font-size: 18px;
+    }
+    
+    .item_texto p {
+        margin-bottom: 20px
+    }
+    
+    .item_texto ul {
+        list-style: none; 
+        text-align: left;
+    }
+    
+    .item_texto ul li {
+        font-size: 1rem;
+        margin-bottom: 1px;
+    }
+    
+    .btn_ver_mais {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+    
+    .footer {
+        padding: 1rem 1rem 1rem 1rem;
+    }
+
+    .footer_nav_links {
+        flex-direction: row;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .links_redes {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .final p {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 2rem; /* Reduz o tamanho do título */
+    }
+
+    button {
+        padding: 0.8rem 1.2rem;
+        font-size: 0.9rem; /* Ajusta o tamanho do botão */
+    }
+
+    #hero_content {
+        padding: 3rem 1rem 5rem 1rem; /* Ajuste o padding no hero */
+    }
+
+    .footer_nav_links {
+        flex-direction: row;
+        gap: 10px;
+        text-align: center; /* Alinha os links do footer ao centro */
+    }
+
+    .item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item_imagem img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .footer {
+        padding: 1rem; /* Ajuste do padding no footer */
+    }
+}
