@@ -246,16 +246,14 @@ h3 {
     .header {
         align-items: flex-start;
         padding: 15px 20px;
-        position: fixed;
     }
     
     .logo {
-    width: 5rem;
+        width: 5rem;
     }
-    
     .nav_links {
-    flex-direction: row;
-    gap: 10px;
+        flex-direction: row;
+        gap: 10px;
     }
     
     #hero_content {

@@ -176,8 +176,6 @@ header::before {
 
 .servicos_rapidos {
     display: flex;
-    gap: 1rem; 
-    display: flex;
     justify-content: center;
     align-items: center;
     width: 70rem;
@@ -303,11 +301,10 @@ header::before {
     .header {
         align-items: flex-start;
         padding: 15px 20px;
-        width: 360px
     }
     
     .logo {
-    width: 5rem;
+        width: 5rem;
     }
     
     .nav_links {
