@@ -3,11 +3,12 @@
 @import url(/styles/local.css);
 
 
-/* Media Query para telas 360px */
+/* Media Query para telas pequenas */
 @media screen and (max-width: 360px) {
     .header {
-    align-items: flex-start;
-    padding: 15px 20px;
+        align-items: flex-start;
+        padding: 15px 20px;
+        width: 360px
     }
     
     .logo {
@@ -32,6 +33,9 @@
     }
     
     .gradient {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     height: 20%;
     border: none;
     margin: 0;
@@ -55,7 +59,7 @@
     }
     
     .hero_title h1 {
-    font-size: 2.5rem
+    font-size: 1.8rem;
     margin-bottom: 10px;
     }
     
@@ -69,18 +73,18 @@
     }
     
     .paragraph_1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-    gap: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+        gap: 20px;
     }
     
     .paragraph_1_text {
-    text-align: justify;
-    font-size: 1rem;
-    margin-bottom: 10px;
-    width: 100%
+        text-align: justify;
+        font-size: 1rem;
+        margin-bottom: 10px;
+        width: 100%
     }
     
     .image_p1 img {
@@ -92,35 +96,40 @@
     .mensagem {
     text-align: center;
     font-size: 22px;
-    margin: 20px 0;
+    margin: 10px 0;
     }
     
     .servicos_rapidos {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 60%;
-    gap: 2px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        width: 100%
     }
     
     .servicos_rapidos .item {
-    width: 100%;
-    text-align: center;
-    padding: 10px;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
     }
     
-    .servicos_rapidos .item_img img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 0.3px;
+    .servicos_rapidos {
+        width: 80%;
+        height: auto;
+        margin-bottom: 10px;
     }
 
     .item {
         gap: 5px;
     }
+
+    .item_img img {
+        width: 100%;
+    }
     
     .serv_texto p {
-    font-size: 10rem;
+        font-size: 1rem;
+        font-weight: 600 !important;
     }
     
     .footer {
@@ -141,8 +150,297 @@
     flex-direction: row;
     align-items: center;
     }
-    
+
     .final p {
-    font-size: 10px;
+        font-size: 10px;
     }
-} 
+}
+
+/* Media Query para telas pequenas */
+@media screen and (max-width: 360px) {
+    .header {
+        align-items: flex-start;
+        padding: 15px 20px;
+    }
+    
+    .logo {
+        width: 5rem;
+    }
+
+    .nav_links {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    #hero_content {
+        padding: 3rem 1rem 6.5rem 1rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .mensagem {
+        text-align: center;
+    }
+
+    #hero_content p {
+        font-size: 1rem;
+        text-align: justify;
+    }
+
+    .item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-sizing: border-box;
+        mar
+    }
+    
+    .item_imagem img {
+        width: 100%;
+        max-width: 300px;
+        height: auto; 
+    }
+    
+    .item_texto {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .item_texto h2 {
+        font-size: 22px;
+    }
+    
+    .item_texto h3 {
+        font-size: 18px;
+    }
+    
+    .item_texto p {
+        margin-bottom: 20px
+    }
+    
+    .item_texto ul {
+        list-style: none; 
+        text-align: left;
+    }
+    
+    .item_texto ul li {
+        font-size: 1rem;
+        margin-bottom: 1px;
+    }
+    
+    .btn_ver_mais {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+    
+    .footer {
+        padding: 1rem 1rem 1rem 1rem;
+    }
+
+    .footer_nav_links {
+        flex-direction: row;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .links_redes {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .final p {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 2rem; /* Reduz o tamanho do título */
+    }
+
+    button {
+        padding: 0.8rem 1.2rem;
+        font-size: 0.9rem; /* Ajusta o tamanho do botão */
+    }
+
+    #hero_content {
+        padding: 3rem 1rem 5rem 1rem; /* Ajuste o padding no hero */
+    }
+
+    .footer_nav_links {
+        flex-direction: row;
+        gap: 10px;
+        text-align: center; /* Alinha os links do footer ao centro */
+    }
+
+    .item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item_imagem img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .footer {
+        padding: 1rem; /* Ajuste do padding no footer */
+    }
+}
+
+/* Media Query para telas pequenas */
+@media screen and (max-width: 360px) {
+    .header {
+        align-items: flex-start;
+        padding: 15px 20px;
+    }
+    
+    .logo {
+        width: 5rem;
+    }
+
+    .nav_links {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    /* Ajustes no hero */
+    #hero_content {
+        padding: 0rem 2rem 6.5rem 2rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    #hero_content p {
+        font-size: 1rem;
+        padding: 5px;
+    }
+
+    /* Ajustes no botão */
+    button {
+        padding: 0.8rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    /* Ajustes nas agências */
+    .agency {
+        padding: 15px;
+        margin: 1rem 0;
+    }
+
+    .agency h3 {
+        font-size: 1.5rem;
+    }
+
+    /* Ajustes no mapa */
+    .map iframe {
+        height: 300px;
+        padding: 5px;
+    }
+
+    /* Ajustes no footer */
+    .footer {
+        padding: 2rem 1rem 1rem 1rem;
+    }
+
+    .footer_nav_links {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .links_redes {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .final p {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header {
+        align-items: flex-start;
+        padding: 15px 20px; /* Ajuste o padding */
+    }
+
+    .logo {
+        width: 5.5rem; /* Ajuste o tamanho da logo */
+    }
+
+    .nav_links {
+        flex-direction: row;
+        gap: 12px; /* Ajuste o espaço entre os links */
+    }
+
+    /* Ajustes no hero */
+    #hero_content {
+        padding: 3rem 2rem 5rem 2rem; /* Ajuste o padding no hero */
+    }
+
+    h1 {
+        font-size: 2rem; 
+        text-align: center;
+    }
+
+    #hero_content p {
+        font-size: 0.9rem; /* Mantém o tamanho igual ao de 360px */
+        padding: 5px;
+    }
+
+    /* Ajustes no botão */
+    button {
+        padding: 0.8rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    /* Ajustes nas agências */
+    .agency {
+        padding: 12px;
+        margin: 1rem 0;
+    }
+
+    .agency h3 {
+        font-size: 1.4rem; /* Ajuste o tamanho da fonte */
+    }
+
+    /* Ajustes no mapa */
+    .map iframe {
+        height: 350px;
+        padding: 5px;
+    }
+
+    /* Ajustes no footer */
+    .footer {
+        padding: 1.8rem 1rem 1rem 1rem;
+    }
+
+    .footer_nav_links {
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+        text-align: center;
+    }
+
+    .links_redes {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .final p {
+        font-size: 10px;
+    }
+}
