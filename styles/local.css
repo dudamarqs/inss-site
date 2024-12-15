@@ -196,7 +196,10 @@ button {
 .footer {
     background-color: #21165c;
     color: #FFFDF8;
-    padding: 2rem 25rem 0.5rem 20rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .footer a {
@@ -208,7 +211,8 @@ button {
 .footer_nav_links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    flex-direction: row;
+    gap: 50px;
     margin-bottom: 1rem;
 }
 
@@ -226,16 +230,20 @@ button {
 .redes p {
     margin-bottom: 0.5rem;
     font-weight: 600;
+    display: flex;
+    justify-content: center;
 }
 
 .links_redes {
     list-style: none;
     display: flex;
-    gap: 15px;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
 }
 
 .rede1 img, .rede2 img, .rede3 img, .rede4 img {
-    height: 30px;
+    height: 40px;
 }
 
 .rede1 img:hover {
@@ -259,15 +267,11 @@ button {
 }
 
 .final {
-    display: grid;
-    place-items: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     margin-top: 1rem;
     margin-bottom: 1rem;
-}
-
-.final img {
-    transform: scale(1.2);
-    margin-bottom: 0.5rem;
 }
 
 /* Media Query para telas pequenas */
@@ -286,35 +290,38 @@ button {
         gap: 10px;
     }
 
-    /* Ajustes no hero */
     #hero_content {
-        padding: 0rem 2rem 6.5rem 2rem;
+        padding: 3rem 1rem 6.5rem 1rem !important;
     }
 
     h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
         text-align: center;
+        margin-top: 30px;
     }
 
     #hero_content p {
         font-size: 1rem;
-        padding: 5px;
     }
 
-    /* Ajustes no botão */
     button {
         padding: 0.8rem 1.2rem;
         font-size: 0.9rem;
     }
 
-    /* Ajustes nas agências */
     .agency {
         padding: 15px;
         margin: 1rem 0;
     }
 
     .agency h3 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+        display: flex;
+        justify-content: center;
     }
 
     /* Ajustes no mapa */
@@ -323,96 +330,16 @@ button {
         padding: 5px;
     }
 
-    /* Ajustes no footer */
     .footer {
-        padding: 2rem 1rem 1rem 1rem;
+        padding: 1rem 1rem 1rem 1rem;
     }
 
-    .footer_nav_links {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+    .links_redes {
         gap: 15px;
     }
-
-    .links_redes {
-        flex-direction: row;
-        align-items: center;
-    }
-
-    .final p {
-        font-size: 10px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .header {
-        align-items: flex-start;
-        padding: 15px 20px; /* Ajuste o padding */
-    }
-
-    .logo {
-        width: 5.5rem; /* Ajuste o tamanho da logo */
-    }
-
-    .nav_links {
-        flex-direction: row;
-        gap: 12px; /* Ajuste o espaço entre os links */
-    }
-
-    /* Ajustes no hero */
-    #hero_content {
-        padding: 3rem 2rem 5rem 2rem; /* Ajuste o padding no hero */
-    }
-
-    h1 {
-        font-size: 2rem; 
-        text-align: center;
-    }
-
-    #hero_content p {
-        font-size: 0.9rem; /* Mantém o tamanho igual ao de 360px */
-        padding: 5px;
-    }
-
-    /* Ajustes no botão */
-    button {
-        padding: 0.8rem 1.2rem;
-        font-size: 0.9rem;
-    }
-
-    /* Ajustes nas agências */
-    .agency {
-        padding: 12px;
-        margin: 1rem 0;
-    }
-
-    .agency h3 {
-        font-size: 1.4rem; /* Ajuste o tamanho da fonte */
-    }
-
-    /* Ajustes no mapa */
-    .map iframe {
-        height: 350px;
-        padding: 5px;
-    }
-
-    /* Ajustes no footer */
-    .footer {
-        padding: 1.8rem 1rem 1rem 1rem;
-    }
-
-    .footer_nav_links {
-        display: flex;
-        flex-direction: row;
-        gap: 12px;
-        text-align: center;
-    }
-
-    .links_redes {
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
+    
+    .rede1 img, .rede2 img, .rede3 img, .rede4 img {
+        height: 25px;
     }
 
     .final p {

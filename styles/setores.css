@@ -89,7 +89,7 @@ h1 {
 }
 
 #hero_content {
-    padding: 4rem 13rem 6.5rem 13rem;
+    padding: 4rem 13rem 6.5rem 8rem;
 }
 
 /* PARÁGRAFOS */
@@ -169,7 +169,10 @@ h3 {
 .footer {
     background-color: #21165c;
     color: #FFFDF8;
-    padding: 2rem 25rem 0.5rem 20rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .footer a {
@@ -181,7 +184,8 @@ h3 {
 .footer_nav_links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    flex-direction: row;
+    gap: 50px;
     margin-bottom: 1rem;
 }
 
@@ -199,16 +203,20 @@ h3 {
 .redes p {
     margin-bottom: 0.5rem;
     font-weight: 600;
+    display: flex;
+    justify-content: center;
 }
 
 .links_redes {
     list-style: none;
     display: flex;
-    gap: 15px;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
 }
 
 .rede1 img, .rede2 img, .rede3 img, .rede4 img {
-    height: 30px;
+    height: 40px;
 }
 
 .rede1 img:hover {
@@ -232,15 +240,11 @@ h3 {
 }
 
 .final {
-    display: grid;
-    place-items: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     margin-top: 1rem;
     margin-bottom: 1rem;
-}
-
-.final img {
-    transform: scale(1.2);
-    margin-bottom: 0.5rem;
 }
 
 
@@ -261,12 +265,13 @@ h3 {
     }
 
     #hero_content {
-        padding: 3rem 1rem 6.5rem 1rem;
+        padding: 3rem 1rem 3rem 1rem;
     }
 
     h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
         text-align: center;
+        margin-top: 30px;
     }
 
     .mensagem {
@@ -283,7 +288,8 @@ h3 {
         flex-direction: column;
         align-items: center;
         box-sizing: border-box;
-        mar
+        margin-top: 10px;
+        gap: 5px;
     }
     
     .item_imagem img {
@@ -304,10 +310,13 @@ h3 {
     
     .item_texto h3 {
         font-size: 18px;
+        margin-top: 1px;
+        margin-bottom: 5px;
     }
     
     .item_texto p {
-        margin-bottom: 20px
+        margin-top: 10px;
+        margin-bottom: 10px
     }
     
     .item_texto ul {
@@ -324,22 +333,19 @@ h3 {
         display: block;
         width: 100%;
         text-align: center;
-        margin-top: 10px;
+        margin-top: 20px;
     }
     
     .footer {
         padding: 1rem 1rem 1rem 1rem;
     }
 
-    .footer_nav_links {
-        flex-direction: row;
-        gap: 10px;
-        text-align: center;
-    }
-
     .links_redes {
-        flex-direction: row;
-        align-items: center;
+        gap: 15px;
+    }
+    
+    .rede1 img, .rede2 img, .rede3 img, .rede4 img {
+        height: 25px;
     }
 
     .final p {
@@ -347,38 +353,3 @@ h3 {
     }
 }
 
-@media screen and (max-width: 480px) {
-    h1 {
-        font-size: 2rem; /* Reduz o tamanho do título */
-    }
-
-    button {
-        padding: 0.8rem 1.2rem;
-        font-size: 0.9rem; /* Ajusta o tamanho do botão */
-    }
-
-    #hero_content {
-        padding: 3rem 1rem 5rem 1rem; /* Ajuste o padding no hero */
-    }
-
-    .footer_nav_links {
-        flex-direction: row;
-        gap: 10px;
-        text-align: center; /* Alinha os links do footer ao centro */
-    }
-
-    .item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .item_imagem img {
-        width: 100%;
-        max-width: 300px;
-    }
-
-    .footer {
-        padding: 1rem; /* Ajuste do padding no footer */
-    }
-}
