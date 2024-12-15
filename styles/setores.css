@@ -23,34 +23,27 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 30px;
-    background-color: rgba(196, 196, 196, 0.7); 
+    background-color: rgba(196, 196, 196, 0.7);
     position: fixed;
     width: 100%;
     z-index: 10;
     backdrop-filter: blur(10px); /* Efeito de desfoque */
 }
 
-/* HERO - PARALLAX */
-header::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.5); 
-    z-index: 1;
-}
-
-/* Logo */
 .logo {
     width: 7rem;
     height: auto;
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Links de navegação */
+.logo:hover {
+    transform: scale(1.1); 
+}
+
 .nav_links {
     list-style: none;
     display: flex;
+    font-size: 17px;
     gap: 20px;
 }
 
@@ -89,10 +82,9 @@ h1 {
 }
 
 #hero_content {
-    padding: 4rem 13rem 6.5rem 8rem;
+    padding: 4rem 13rem 6.5rem 13rem;
 }
 
-/* PARÁGRAFOS */
 .paragraph_1 {
     display: flex;
     gap: 5rem;
@@ -130,11 +122,15 @@ h3 {
     color: #FDBE50;
 }
 
+.item_texto ul li {
+    list-style: none;
+}
+
 /* Imagem mantém o tamanho fixo */
 .item_imagem img {
     width: auto;
-    max-width: 25rem; /* Ajuste o tamanho máximo conforme necessário */
-    height: auto; /* Mantém as proporções */
+    max-width: 25rem;
+    height: auto; 
 }
 
 /* Botão estilizado */
@@ -142,7 +138,7 @@ h3 {
     display: inline-block;
     margin-top: 1rem;
     padding: 0.8rem 1.5rem;
-    background-color: #009A66; /* Verde da logo do INSS */
+    background-color: #009A66; 
     color: #FFF; /* Texto branco */
     border: none;
     border-radius: 20px; /* Bordas arredondadas */
@@ -153,16 +149,14 @@ h3 {
     text-align: center;
 }
 
-/* Links dentro do botão */
 .btn_ver_mais a {
-    text-decoration: none; /* Remove o sublinhado */
-    color: inherit; /* Garante que o link herde a cor branca do botão */
-    font-weight: inherit; /* Herda o estilo de fonte do botão */
+    text-decoration: none;
+    color: inherit;
+    font-weight: inherit; 
 }
 
-/* Efeito hover no botão */
 .btn_ver_mais:hover {
-    background-color: #007C53; /* Tom de verde mais escuro no hover */
+    background-color: #007C53;
 }
 
 /* FOOTER */
@@ -246,7 +240,6 @@ h3 {
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
-
 
 /* Media Query para telas pequenas */
 @media screen and (max-width: 360px) {
@@ -352,4 +345,3 @@ h3 {
         font-size: 10px;
     }
 }
-

@@ -43,6 +43,7 @@ body {
 .nav_links {
     list-style: none;
     display: flex;
+    font-size: 17px;
     gap: 20px;
 }
 

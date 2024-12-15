@@ -23,23 +23,27 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 30px;
-    background-color: rgba(196, 196, 196, 0.7); /* Fundo semi-transparente */
+    background-color: rgba(196, 196, 196, 0.7);
     position: fixed;
     width: 100%;
     z-index: 10;
     backdrop-filter: blur(10px); /* Efeito de desfoque */
 }
 
-/* Logo */
 .logo {
     width: 7rem;
     height: auto;
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Links de navegação */
+.logo:hover {
+    transform: scale(1.1); 
+}
+
 .nav_links {
     list-style: none;
     display: flex;
+    font-size: 17px;
     gap: 20px;
 }
 
@@ -104,12 +108,12 @@ h1 {
 /* Botão estilizado */
 button {
     display: inline-block;
-    margin-top: 0.2rem;
+    margin-top: 1rem;
     padding: 0.8rem 1.5rem;
-    background-color: #009A66; /* Verde da logo do INSS */
-    color: #FFF; /* Texto branco */
+    background-color: #009A66; 
+    color: #FFF; 
     border: none;
-    border-radius: 20px; /* Bordas arredondadas */
+    border-radius: 20px !important;
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
@@ -126,7 +130,7 @@ button {
 
 /* Efeito hover no botão */
 .btn_ver_mais:hover {
-    background-color: #007C53; /* Tom de verde mais escuro no hover */
+    background-color: #007C53;
 }
 
 #localizacao {
@@ -176,6 +180,10 @@ button {
 /* Mapa interativo */
 .map {
     margin-top: 3rem;
+}
+
+.map h2 {
+    font-size: 1.5rem;
 }
 
 .map iframe {
